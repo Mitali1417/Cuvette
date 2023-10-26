@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Header from "./components/Header/Header";
+import QuickStatistics from "./components/QuickStatistics/QuickStatistics";
+import ComparisonGraph from "./components/ComparisonGraph/ComparisonGraph.jsx";
+import QuestionAnalysis from "./components/QuestionAnalysis/QuestionAnalysis";
+import SyllabusAnalysis from "./components/SyllabusAnalysis/SyllabusAnalysis";
 
 function App() {
+    const [rank, setRank] = useState(''); // Initial rank value
+    const [percentile, setPercentile] = useState(37); // Initial percentile value
+    const [currentScore, setCurrentScore] = useState('');
+
+
+ const handleUpdate = (updatedStats) => {
+    setRank(updatedStats.rank);
+    setPercentile(updatedStats.percentile);
+    setCurrentScore(updatedStats.currentScore);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Sidebar />
+      <SyllabusAnalysis />
+      <QuickStatistics onUpdate={handleUpdate} />
+      <ComparisonGraph percentile={percentile} />
+      <p>Rank: {rank}</p>
+      <p>Current Score: {currentScore} / 15</p>
+      <QuestionAnalysis />
     </div>
   );
 }

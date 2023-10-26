@@ -1,0 +1,124 @@
+.update-modal-overlay {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 39, 46, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.update-modal {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 53rem;
+  height: 30rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  padding: 2rem;
+}
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 0.15rem #ebf0f5 solid;
+}
+.update-header-text {
+  color: #222f3e;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.045rem;
+}
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+.list-heading {
+  display: flex;
+  width: 100%;
+}
+
+.list {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #142683;
+  border-radius: 20rem;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  margin-right: 1rem;
+  letter-spacing: -0.01875rem;
+}
+.text-label {
+  color: #566474;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.0225rem;
+}
+input {
+  outline: none;
+  /* border: none; */
+  background-color: transparent;
+  width: 9.8125rem;
+  height: 2.75rem;
+  margin: 1rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #142683;
+  padding: 0.5rem 1rem;
+
+  resize: none;
+}
+input:focus {
+  outline: none;
+}
+.update-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  width: 100%;
+  margin-top: 3rem;
+}
+.save-btn {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3125rem;
+  background: #142683;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: -0.02rem;
+  width: 5.3rem;
+  margin-right: 4rem;
+}
+.close-btn {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3125rem;
+  border: 1px solid #142683;
+  color: #142683;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: -0.02rem;
+  width: 5.3rem;
+  margin-right: 2rem;
+}
